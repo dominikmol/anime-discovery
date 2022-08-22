@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    <title>Anime Discovery</title>
+    <!--<script type="text/javascript" src="static\scripts.js"></script>-->
+{% endblock title %}
+
+{% block body %}
+    <section id="anime">
+        <h1>{{ anime['title'] }}</h1>
+        <img src="{{ anime['image_url'] }}" alt="{{ anime['title'] }}" id="anime_picture">
+        <br>
+        <a href="{{ anime['url'] }}">check more information on myanimelist.net</a>
+        <br>
+        <p class="tags">score: {{ anime['score'] }}</p>
+        <br>
+        <p class="tags">episodes: {{ anime['episodes'] }}</p>
+        <br>
+        <p class="tags">started airing: {{ anime['airing_start'] }}</p>
+        <br>
+        <p class="tags">source of anime: {{ anime['source'] }}</p>
+        <br>
+        <p class="tags">genres: {{ anime['genres'] }}</p>
+        <br>
+        <p class="tags">themes: {{ anime['themes'] }}</p>
+        <br>
+        <p class="tags">demographics: {{ anime['demographics'] }}</p>
+        <br>
+        <p id="synopsis">synopsis: {{ anime['synopsis'] }}</p>
+    </section>
+{% endblock body %}

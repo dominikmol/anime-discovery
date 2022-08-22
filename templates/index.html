@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    <title>Anime Discovery</title>
+    <!--<script type="text/javascript" src="static\scripts.js"></script>-->
+{% endblock title %}
+
+{% block body %}
+    <form action="/" method="post">
+        <h2>Find what is the best anime to watch next</h2>
+        <section id="options">
+            year<input type="number" name="year" id="year" min="1995" max="2022" onchange="correctYear()" required><br>
+            season <select name="season" id="season" >
+                <option value="" disabled selected>season</option>
+                <option value="winter">winter</option>
+                <option value="spring">spring</option>
+                <option value="summer">summer</option>
+                <option value="fall">fall</option>
+            </select><br>
+            minimal score<input type="number" name="minScore" id="minScore" min="0" max="10" onchange="correctScore()" required>
+        </section>
+        <br>
+        <section id="blacklist">
+            <h3>What tags do you not want</h3>
+            {% for tag in blacklist %}
+                <input type="checkbox" name="blacklist[]" value="{{ tag }}">
+                <label>{{ tag }}</label>
+            {% endfor %}
+        </section>
+        <br>
+        <section id="tags">
+            <h3>What tags do you want</h3>
+            {% for tag in tags %}
+                <input type="checkbox" class="tags" name="tags[]" value="{{ tag }}" onclick="requiredItem()" required>
+                <label>{{ tag }}</label>
+            {% endfor %}
+        </section>
+        <br>
+        <input type="submit" value="search">
+    </form>
+    
+{% endblock body %}

@@ -1,0 +1,57 @@
+body {
+    font-size: 100%;
+    background-color: bisque;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+form {
+    margin: 0 auto;
+    text-align: center;
+}
+
+nav {
+    margin: 0 auto;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.tags {
+    margin: 0px;
+    padding: 0px;
+    text-align: justify;
+}
+
+#options {
+    margin: 0 auto;
+    width: 75%;
+    background-color: beige;
+    border: 1px solid black;
+}
+
+#blacklist {
+    margin: 0 auto;
+    width: 75%;
+    background-color: beige;
+    border: 1px solid black;
+}
+
+#tags {
+    margin: 0 auto;
+    width: 75%;
+    background-color: beige;
+    border: 1px solid black;
+}
+
+#anime {
+    margin: 0 auto;
+    width: 75%;
+    text-align: center;
+}
+
+#synopsis {
+    text-align: justify;
+}
